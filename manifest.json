@@ -1,0 +1,33 @@
+{
+  "name": "chrome-cookies-access-extension",
+  "version": "0.8",
+  "manifest_version": 2,
+  "description": "Allows the page js to access ALL the cookies",
+  "permissions": [
+    "cookies",
+    "tabs",
+    "activeTab",
+    "scripting",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "icons": {
+    "16": "cookie.png",
+    "48": "cookie.png",
+    "128": "cookie.png"
+  },
+  "browser_action": {
+    "default_icon": "cookie.png"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "externally_connectable": {
+    "matches": [
+      "https://relay.amazon.com/*",
+      "https://relay.amazon.co.uk/*"
+    ]
+  }
+}
